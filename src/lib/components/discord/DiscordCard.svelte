@@ -1,27 +1,25 @@
 <script lang="ts">
 	import DiscordActivities from "./Activities.svelte";
-	import DiscordAbout from "./DiscordAbout.svelte";
 	import DiscordAvatar from "./DiscordAvatar.svelte";
-	import DiscordDates from "./DiscordDates.svelte";
 	import { lanyard } from "$lib/lanyard/index.js";
 
 	const data$ = lanyard();
 </script>
 
-<section class="w-[300px] drop-shadow-xl dark:text-slate-200">
+<div class="w-[300px] drop-shadow-xl dark:text-slate-200">
 	<div class="h-full overflow-hidden rounded-2xl bg-slate-50 dark:bg-zinc-900">
 		<div class="relative">
 			<picture>
 				<source srcset="/img/banner.webp" type="image/webp" />
 				<source srcset="/img/banner.gif" type="image/gif" />
 				<img
-					alt="niskii, banner"
+					alt="banner"
 					aria-hidden="true"
 					class="block"
 					draggable="false"
-					height={120}
+					height="120"
 					src="/img/banner.gif"
-					width={300}
+					width="300"
 				/>
 			</picture>
 
@@ -54,11 +52,17 @@
 				<div class="mb-3 h-[1px] w-full bg-slate-200 dark:bg-zinc-800" />
 
 				<section class="mb-3">
-					<DiscordAbout />
+					<h2 class="mb-2 text-xs font-bold uppercase leading-4 text-zinc-700 dark:text-slate-300">About Me</h2>
+					<div class="whitespace-pre-line">
+						<span class="inline-block">just be yourself.</span>
+					</div>
 				</section>
 
 				<section class="mb-3">
-					<DiscordDates />
+					<h2 class="mb-2 text-xs font-bold uppercase leading-4 text-zinc-700 dark:text-slate-300">
+						Discord Member Since
+					</h2>
+					<span class="whitespace-pre-line">May 28, 2021</span>
 				</section>
 
 				{#if $data$?.activities?.length}
@@ -67,4 +71,4 @@
 			</section>
 		</div>
 	</div>
-</section>
+</div>

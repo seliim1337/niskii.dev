@@ -1,10 +1,10 @@
 <script lang="ts">
 	import type { Readable } from "svelte/store";
 	import type { LanyardData } from "$lib/lanyard/types";
-	
+
 	export let data$: Readable<LanyardData | undefined>;
 
-	const statusClasses = (status: string | undefined) => {
+	function handleStatusChange(status: string | undefined) {
 		switch (status) {
 			case "dnd":
 				return "fill-red-500";
@@ -18,11 +18,11 @@
 			default:
 				return "fill-slate-500";
 		}
-	};
+	}
 </script>
 
 <circle
-	class={statusClasses($data$?.discord_status)}
+	class={`${handleStatusChange($data$?.discord_status)} transition transition-colors duration-300 ease-in-out`}
 	cx="68"
 	cy="68"
 	mask={`url(#svg-mask-status-${$data$?.discord_status ?? "offline"})`}

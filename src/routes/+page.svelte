@@ -11,16 +11,16 @@
 			<header class="px-24">
 				<Heading interval={[80, 90, 110]}>
 					<h1 class="justify-center text-center text-6xl font-bold leading-tight xl:text-start" slot="heading">
-						<span>Hiyu, I'm </span><span class="text-pink-400">Niskii</span><span class="blink">|</span>
+						<span>Hiyu, I'm </span><span class="text-pink-400">Niskii</span>
 					</h1>
 				</Heading>
-				<Heading delay={1_180} interval={[60, 70, 90]}>
+				<Heading delay={1_220} interval={[60, 70, 90]}>
 					<h2 class="justify-center text-center text-2xl font-light xl:text-start" slot="heading">
 						<span>Software Engineer</span><span class="blink">|</span>
 					</h2>
 				</Heading>
 
-				<nav class="mt-4 flex justify-center gap-4 xl:justify-start">
+				<nav class="mt-12 flex justify-center gap-4 xl:justify-start">
 					<ExternalLink href="mailto:business@niskii.dev" label="Email">
 						<Icon class="text-2xl" icon="i-octicon-mail" />
 					</ExternalLink>
@@ -39,9 +39,9 @@
 				</nav>
 			</header>
 
-			<div class="mt-12">
+			<section class="mt-12">
 				<DiscordCard />
-			</div>
+			</section>
 		</div>
 	</section>
 </main>

@@ -3,10 +3,6 @@
 	font-feature-settings: "cv02", "cv03", "cv04", "cv11";
 }
 
-.large-mask {
-	mask: url(/masks/card-activity-large.svg);
-}
-
 .blink {
 	animation: identifier 1s linear infinite;
 }

@@ -1,18 +1,14 @@
 <script lang="ts">
 	import type { Readable } from "svelte/store";
-	import { activities } from "./activities.js";
 	import Game from "./activity/Game.svelte";
 	import type { LanyardData } from "$lib/lanyard/types";
 
 	export let data$: Readable<Partial<LanyardData>>;
-
-	const activities$ = activities(data$);
+	const activity = $data$.activities?.find((activity) => activity.type === 0);
 </script>
 
-{#if $activities$?.length}
-	{#each $activities$ as activity}
-		{#if activity.type === 0}
-			<Game {activity} />
-		{/if}
-	{/each}
+{#if $data$.activities?.length}
+	{#if activity}
+		<Game {activity} />
+	{/if}
 {/if}

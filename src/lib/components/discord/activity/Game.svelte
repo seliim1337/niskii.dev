@@ -43,10 +43,10 @@
 				<img
 					class="large-mask block rounded-lg object-cover"
 					draggable="false"
-					height={60}
+					height="60"
 					alt={activity.assets?.large_text}
 					src={getAssetUrl(activity.application_id, activity.assets?.large_image)}
-					width={60}
+					width="60"
 				/>
 			{:else}
 				<GameIcon />
@@ -108,3 +108,9 @@
 		</section>
 	{/each}
 </section>
+
+<style scoped>
+	.large-mask {
+		mask: url(/static/masks/card-activity-large.svg);
+	}
+</style>

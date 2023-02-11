@@ -1,0 +1,53 @@
+{
+	"name": "niskii.dev",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"test": "playwright test",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"test:unit": "vitest",
+		"lint": "prettier --check . && eslint src --ext .mjs,.js,.cjs,.ts,.tsx,.svelte --format=pretty",
+		"format": "prettier --write . && eslint src --ext .mjs,.js,.cjs,.ts,.tsx,.svelte --fix --format=pretty",
+		"fmt": "yarn format"
+	},
+	"type": "module",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/nicolasribeiroo/niskii.dev.git"
+	},
+	"bugs": {
+		"url": "https://github.com/nicolasribeiroo/niskii.dev/issues"
+	},
+	"homepage": "https://niskii.dev",
+	"devDependencies": {
+		"@iconify-json/fa6-brands": "^1.1.8",
+		"@iconify-json/octicon": "^1.1.30",
+		"@playwright/test": "^1.28.1",
+		"@sveltejs/adapter-auto": "^1.0.0",
+		"@sveltejs/adapter-vercel": "^1.0.6",
+		"@sveltejs/kit": "^1.0.0",
+		"@types/cookie": "^0.5.1",
+		"@unocss/cli": "^0.49.4",
+		"@unocss/reset": "^0.49.4",
+		"@unocss/vite": "^0.49.4",
+		"clsx": "^1.2.1",
+		"eslint": "^8.28.0",
+		"eslint-config-neon": "^0.1.40",
+		"eslint-formatter-pretty": "^4.1.0",
+		"playwright": "^1.30.0",
+		"prettier": "^2.8.0",
+		"prettier-plugin-svelte": "^2.8.1",
+		"prettier-plugin-tailwindcss": "^0.2.2",
+		"svelte": "^3.54.0",
+		"svelte-check": "^3.0.1",
+		"svelte-typewriter": "^3.1.4",
+		"typescript": "^4.9.3",
+		"unocss": "^0.49.4",
+		"vite": "^4.0.0",
+		"vitest": "^0.25.3"
+	}
+}

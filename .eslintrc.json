@@ -1,0 +1,15 @@
+{
+	"extends": [
+		"neon/common",
+		"neon/browser",
+		"neon/node",
+		"neon/typescript",
+		"neon/svelte",
+		"neon/svelte-typescript",
+		"neon/prettier"
+	],
+	"parserOptions": {
+		"project": "./tsconfig.eslint.json"
+	},
+	"ignorePatterns": ["**/dist/*"]
+}

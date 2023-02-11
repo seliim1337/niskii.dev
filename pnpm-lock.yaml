@@ -8,10 +8,12 @@ specifiers:
   "@sveltejs/adapter-vercel": ^1.0.6
   "@sveltejs/kit": ^1.0.0
   "@types/cookie": ^0.5.1
+  "@types/node": ^18.13.0
   "@unocss/cli": ^0.49.4
   "@unocss/reset": ^0.49.4
   "@unocss/vite": ^0.49.4
   clsx: ^1.2.1
+  discord-api-types: ^0.37.32
   eslint: ^8.28.0
   eslint-config-neon: ^0.1.40
   eslint-formatter-pretty: ^4.1.0
@@ -35,10 +37,12 @@ devDependencies:
   "@sveltejs/adapter-vercel": 1.0.6_@sveltejs+kit@1.5.5
   "@sveltejs/kit": 1.5.5_svelte@3.55.1+vite@4.1.1
   "@types/cookie": 0.5.1
+  "@types/node": 18.13.0
   "@unocss/cli": 0.49.4
   "@unocss/reset": 0.49.4
   "@unocss/vite": 0.49.4_vite@4.1.1
   clsx: 1.2.1
+  discord-api-types: 0.37.32
   eslint: 8.34.0
   eslint-config-neon: 0.1.40_fvfn5bmg3vwbuurdzqtxpvg2bm
   eslint-formatter-pretty: 4.1.0
@@ -51,7 +55,7 @@ devDependencies:
   svelte-typewriter: 3.1.4_svelte@3.55.1
   typescript: 4.9.5
   unocss: 0.49.4_vite@4.1.1
-  vite: 4.1.1
+  vite: 4.1.1_@types+node@18.13.0
   vitest: 0.25.8
 
 packages:
@@ -810,7 +814,7 @@ packages:
       svelte: 3.55.1
       tiny-glob: 0.2.9
       undici: 5.18.0
-      vite: 4.1.1
+      vite: 4.1.1_@types+node@18.13.0
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -829,7 +833,7 @@ packages:
       magic-string: 0.27.0
       svelte: 3.55.1
       svelte-hmr: 0.15.1_svelte@3.55.1
-      vite: 4.1.1
+      vite: 4.1.1_@types+node@18.13.0
       vitefu: 0.2.4_vite@4.1.1
     transitivePeerDependencies:
       - supports-color
@@ -1325,7 +1329,7 @@ packages:
       chokidar: 3.5.3
       fast-glob: 3.2.12
       magic-string: 0.27.0
-      vite: 4.1.1
+      vite: 4.1.1_@types+node@18.13.0
     transitivePeerDependencies:
       - rollup
     dev: true
@@ -2020,6 +2024,11 @@ packages:
     engines: { node: ">=8" }
     dependencies:
       path-type: 4.0.0
+    dev: true
+
+  /discord-api-types/0.37.32:
+    resolution:
+      { integrity: sha512-oUA4dhrzFOkvIWOc9WvKhPwsezUUVd5v5M7am1uupnRZjOmpE9RJMS0fTCUqNiMRlNAaZwPEy09UZOdIR9CyGQ== }
     dev: true
 
   /doctrine/2.1.0:
@@ -5188,40 +5197,6 @@ packages:
       spdx-expression-parse: 3.0.1
     dev: true
 
-  /vite/4.1.1:
-    resolution:
-      { integrity: sha512-LM9WWea8vsxhr782r9ntg+bhSFS06FJgCvvB0+8hf8UWtvaiDagKYWXndjfX6kGl74keHJUcpzrQliDXZlF5yg== }
-    engines: { node: ^14.18.0 || >=16.0.0 }
-    hasBin: true
-    peerDependencies:
-      "@types/node": ">= 14"
-      less: "*"
-      sass: "*"
-      stylus: "*"
-      sugarss: "*"
-      terser: ^5.4.0
-    peerDependenciesMeta:
-      "@types/node":
-        optional: true
-      less:
-        optional: true
-      sass:
-        optional: true
-      stylus:
-        optional: true
-      sugarss:
-        optional: true
-      terser:
-        optional: true
-    dependencies:
-      esbuild: 0.16.17
-      postcss: 8.4.21
-      resolve: 1.22.1
-      rollup: 3.15.0
-    optionalDependencies:
-      fsevents: 2.3.2
-    dev: true
-
   /vite/4.1.1_@types+node@18.13.0:
     resolution:
       { integrity: sha512-LM9WWea8vsxhr782r9ntg+bhSFS06FJgCvvB0+8hf8UWtvaiDagKYWXndjfX6kGl74keHJUcpzrQliDXZlF5yg== }
@@ -5266,7 +5241,7 @@ packages:
       vite:
         optional: true
     dependencies:
-      vite: 4.1.1
+      vite: 4.1.1_@types+node@18.13.0
     dev: true
 
   /vitest/0.25.8:

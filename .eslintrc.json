@@ -11,5 +11,9 @@
 	"parserOptions": {
 		"project": "./tsconfig.eslint.json"
 	},
-	"ignorePatterns": ["**/dist/*"]
+	"ignorePatterns": ["**/dist/*"],
+	"rules": {
+		"id-length": "off",
+		"no-restricted-globals": "off"
+	}
 }

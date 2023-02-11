@@ -1,29 +1,33 @@
-<script>
+<script lang="ts">
+	import DiscordActivities from "./Activities.svelte";
 	import DiscordAbout from "./DiscordAbout.svelte";
 	import DiscordAvatar from "./DiscordAvatar.svelte";
 	import DiscordDates from "./DiscordDates.svelte";
+	import { lanyard } from "$lib/lanyard/index.js";
+
+	const data$ = lanyard();
 </script>
 
 <section class="w-[300px] drop-shadow-xl dark:text-slate-200">
 	<div class="h-full overflow-hidden rounded-2xl bg-slate-50 dark:bg-zinc-900">
 		<div class="relative">
 			<picture>
-				<source srcset="/banner.webp" type="image/webp" />
-				<source srcset="/banner.gif" type="image/gif" />
+				<source srcset="/img/banner.webp" type="image/webp" />
+				<source srcset="/img/banner.gif" type="image/gif" />
 				<img
 					alt="niskii, banner"
 					aria-hidden="true"
 					class="block"
 					draggable="false"
 					height={120}
-					src="/banner.gif"
+					src="/img/banner.gif"
 					width={300}
 				/>
 			</picture>
 
 			<section class="absolute top-[76px] left-[16px]">
 				<div class="rounded-full">
-					<DiscordAvatar />
+					<DiscordAvatar {data$} />
 				</div>
 			</section>
 
@@ -43,7 +47,7 @@
 						aria-label="An image representing the logo of the k-pop group 'TWICE'."
 						class="-my-px mr-1"
 						draggable="false"
-						src="/twice.webp"
+						src="/img/twice.webp"
 					/>
 				</div>
 
@@ -56,6 +60,10 @@
 				<section class="mb-3">
 					<DiscordDates />
 				</section>
+
+				{#if $data$?.activities?.length}
+					<DiscordActivities {data$} />
+				{/if}
 			</section>
 		</div>
 	</div>

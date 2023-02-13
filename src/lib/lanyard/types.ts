@@ -1,14 +1,5 @@
 import type { GatewayActivity, GatewayActivityTimestamps } from "discord-api-types/v10";
 
-enum LanyardWebSocketOpcode {
-	EVENT = 0,
-	HELLO = 1,
-	INITIALIZE = 2,
-	HEARTBEAT = 3,
-}
-
-export type LanyardWebSocketEvent = "INIT_STATE" | "PRESENCE_UPDATE";
-
 export type LanyardSpotifyData = {
 	album: string;
 	album_art_url: string;
@@ -40,9 +31,18 @@ export type LanyardData = {
 	spotify: LanyardSpotifyData | null;
 };
 
+export enum LanyardOpcode {
+	Event = 0,
+	Hello = 1,
+	Initialize = 2,
+	Heartbeat = 3,
+}
+
+export type LanyardWebSocketEvent = "INIT_STATE" | "PRESENCE_UPDATE";
+
 export type LanyardWebSocketMessage = {
 	d: LanyardData;
-	op: LanyardWebSocketOpcode;
+	op: LanyardOpcode;
 	seq: number;
 	t: LanyardWebSocketEvent;
 };

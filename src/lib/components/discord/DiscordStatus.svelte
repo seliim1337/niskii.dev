@@ -1,6 +1,6 @@
 <script lang="ts">
-	import type { Readable } from "svelte/store";
 	import type { LanyardData } from "$lib/lanyard/types";
+	import type { Readable } from "svelte/store";
 
 	export let data$: Readable<LanyardData | undefined>;
 

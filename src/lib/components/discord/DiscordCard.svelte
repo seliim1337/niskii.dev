@@ -1,7 +1,7 @@
-<script lang="ts">
+<script>
+	import { lanyard } from "$lib/lanyard/index";
 	import DiscordActivities from "./Activities.svelte";
 	import DiscordAvatar from "./DiscordAvatar.svelte";
-	import { lanyard } from "$lib/lanyard/index.js";
 
 	const data$ = lanyard();
 </script>

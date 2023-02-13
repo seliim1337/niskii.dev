@@ -1,8 +1,8 @@
 <script lang="ts">
 	import type { GatewayActivity } from "discord-api-types/v10";
 	import { onDestroy } from "svelte";
+	import { getAssetUrl } from "~/utils/getAssetUrl";
 	import GameIcon from "./GameIcon.svelte";
-	import { getAssetUrl } from "$lib/utils/getAssetUrl.js";
 
 	export let activity: GatewayActivity;
 
@@ -30,10 +30,12 @@
 		}, 1_000);
 		onDestroy(() => clearInterval(interval));
 	}
+
+	let buttons = activity.buttons as string[] ?? [];
 </script>
 
-<section class="mb-3 select-none">
-	<h2 class="mb-2 select-none text-xs font-bold uppercase leading-4 text-zinc-700 dark:text-slate-300">
+<section class="mb-3">
+	<h2 class="mb-2 text-xs font-bold uppercase leading-4 text-zinc-700 dark:text-slate-300">
 		Playing a Game
 	</h2>
 
@@ -97,10 +99,10 @@
 		</section>
 	</div>
 
-	{#each activity.buttons as button}
+	{#each buttons as button}
 		<section class="mt-3 flex flex-col flex-wrap items-stretch justify-center space-y-2">
 			<button
-				class="relative flex h-8 w-full select-none items-center justify-center rounded bg-zinc-500 text-sm text-white transition-colors hover:bg-zinc-600 dark:bg-zinc-600 hover:dark:bg-zinc-500"
+				class="relative flex h-8 w-full items-center justify-center rounded bg-zinc-500 text-sm text-white transition-colors hover:bg-zinc-600 dark:bg-zinc-600 hover:dark:bg-zinc-500"
 				type="button"
 			>
 				<div class="block overflow-hidden text-ellipsis whitespace-nowrap">{button}</div>

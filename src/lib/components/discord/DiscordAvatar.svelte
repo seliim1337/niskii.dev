@@ -1,7 +1,7 @@
 <script lang="ts">
+	import type { LanyardData } from "$lib/lanyard/types";
 	import type { Readable } from "svelte/store";
 	import DiscordStatus from "./DiscordStatus.svelte";
-	import type { LanyardData } from "$lib/lanyard/types.js";
 	
 	export let data$: Readable<LanyardData>;
 </script>

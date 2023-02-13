@@ -6,6 +6,7 @@
 		"neon/typescript",
 		"neon/svelte",
 		"neon/svelte-typescript",
+		"neon/astro",
 		"neon/prettier"
 	],
 	"parserOptions": {

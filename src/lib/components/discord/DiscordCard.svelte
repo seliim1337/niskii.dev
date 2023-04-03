@@ -38,7 +38,7 @@
 				<!-- Badges -->
 			</section>
 
-			<!--<section class="flex-initial px-4 pb-3.5 text-sm">
+			<section class="flex-initial px-4 pb-3.5 text-sm">
 				<div class="pb-2.5">
 					<img
 						alt="twice"
@@ -47,7 +47,7 @@
 						draggable="false"
 						src="/img/twice.webp"
 					/>
-				</div>-->
+				</div>
 
 				<div class="mb-3 h-[1px] w-full bg-slate-200 dark:bg-zinc-800" />
 

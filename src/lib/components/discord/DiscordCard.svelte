@@ -31,14 +31,14 @@
 
 			<section class="px-4 pt-16 pb-3">
 				<div class="text-xl font-semibold leading-6">
-					<span class="text-zinc-900 dark:text-slate-50">Niskii</span>
-					<span class="dark:text-slate-300">#8131</span>
+					<span class="text-zinc-900 dark:text-slate-50">selim</span>
+					<span class="dark:text-slate-300">#1337</span>
 				</div>
 
 				<!-- Badges -->
 			</section>
 
-			<section class="flex-initial px-4 pb-3.5 text-sm">
+			<!--<section class="flex-initial px-4 pb-3.5 text-sm">
 				<div class="pb-2.5">
 					<img
 						alt="twice"
@@ -47,7 +47,7 @@
 						draggable="false"
 						src="/img/twice.webp"
 					/>
-				</div>
+				</div>-->
 
 				<div class="mb-3 h-[1px] w-full bg-slate-200 dark:bg-zinc-800" />
 
@@ -62,7 +62,7 @@
 					<h2 class="mb-2 text-xs font-bold uppercase leading-4 text-zinc-700 dark:text-slate-300">
 						Discord Member Since
 					</h2>
-					<span class="whitespace-pre-line">May 28, 2021</span>
+					<span class="whitespace-pre-line">Sep 17, 2017</span>
 				</section>
 
 				{#if $data$?.activities?.length}

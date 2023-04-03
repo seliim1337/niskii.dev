@@ -15,7 +15,7 @@ export function lanyard() {
 
 				switch (op) {
 					case LanyardOpcode.Hello: {
-						ws.send(JSON.stringify({ op: 2, d: { subscribe_to_id: "847865068657836033" } }));
+						ws.send(JSON.stringify({ op: 2, d: { subscribe_to_id: "546303073962950657" } }));
 
 						interval = setInterval(() => {
 							ws.send(JSON.stringify({ op: 3 }));
